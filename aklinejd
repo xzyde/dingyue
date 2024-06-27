@@ -96,4 +96,4 @@ proxy-groups:
 rules:
     - GEOIP,LAN,DIRECT
     - GEOIP,CN,DIRECT
-    - MATCH,节点选
+    - MATCH,节点选择
