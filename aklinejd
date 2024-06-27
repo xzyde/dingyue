@@ -1,0 +1,99 @@
+port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+unified-delay: true
+global-client-fingerprint: chrome
+ipv6: true
+dns:
+  enable: true
+  listen: :53
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver: 
+    - 223.5.5.5
+    - 8.8.8.8
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  fallback:
+    - https://1.0.0.1/dns-query
+    - tls://dns.google
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+
+proxies:        
+  - name: Reality
+    type: vless
+    server: 102.215.231.173
+    port: 12644
+    uuid: 38945290-5fd6-4885-abdf-28f01b0e356b
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: itunes.apple.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 5AIdcLpf4EPWmbaN0KKHv9FoIuqq9QEI5vDJVhqEFAg
+      short-id: 66944fdc9f611b0e
+
+  - name: Hysteria2
+    type: hysteria2
+    server: 102.215.231.173
+    port: 10938
+    #  up和down均不写或为0则使用BBR流控
+    # up: "30 Mbps" # 若不写单位，默认为 Mbps
+    # down: "200 Mbps" # 若不写单位，默认为 Mbps
+    password: 192ae26aef7495d7
+    sni: bing.com
+    skip-cert-verify: true
+    alpn:
+      - h3
+  - name: Vmess
+    type: vmess
+    server: icook.hk
+    port: 443
+    uuid: 2e67ca4a-b486-45cc-a4d5-b21177666ee2
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    client-fingerprint: chrome  
+    skip-cert-verify: true
+    servername: quarter-psp-nam-nerve.trycloudflare.com
+    network: ws
+    ws-opts:
+      path: /d30f7adb3da6?ed=2048
+      headers:
+        Host: quarter-psp-nam-nerve.trycloudflare.com
+
+proxy-groups:
+  - name: 节点选择
+    type: select
+    proxies:
+      - 自动选择
+      - Reality
+      - Hysteria2
+      - Vmess
+      - DIRECT
+
+  - name: 自动选择
+    type: url-test #选出延迟最低的机场节点
+    proxies:
+      - Reality
+      - Hysteria2
+      - Vmess
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 50
+
+
+rules:
+    - GEOIP,LAN,DIRECT
+    - GEOIP,CN,DIRECT
+    - MATCH,节点选择
