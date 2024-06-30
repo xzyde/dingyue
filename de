@@ -30,8 +30,8 @@ proxies:
   - name: Reality
     type: vless
     server: 2a01:4f8:231:f61b::1
-    port: 10044
-    uuid: 3a3997eb-20d4-4294-a49b-82de139b5d75
+    port: 17379
+    uuid: 19b3396c-6989-4878-b16d-ef6be7a80915
     network: tcp
     udp: true
     tls: true
@@ -39,17 +39,17 @@ proxies:
     servername: itunes.apple.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: NlEog8ctPz2MoMDyM90tIDwdeOXDaRnJFEza_6VrbGQ
-      short-id: aaf51da88e48c264
+      public-key: K4WZYgfsqRyZb9AnBxxICjShs0l-uu1f66Df0KflszE
+      short-id: b73d0173ea40d5d7
 
   - name: Hysteria2
     type: hysteria2
     server: 2a01:4f8:231:f61b::1
-    port: 17506
+    port: 10299
     #  up和down均不写或为0则使用BBR流控
     # up: "30 Mbps" # 若不写单位，默认为 Mbps
     # down: "200 Mbps" # 若不写单位，默认为 Mbps
-    password: d5eae909de72574a
+    password: 205151d7c75dd581
     sni: bing.com
     skip-cert-verify: true
     alpn:
@@ -58,19 +58,19 @@ proxies:
     type: vmess
     server: icook.hk
     port: 443
-    uuid: 765d87e3-0e83-45c0-b5c3-a21d224ec78f
+    uuid: 92c6fbb8-3077-4b2f-a37d-55f3216fbf40
     alterId: 0
     cipher: auto
     udp: true
     tls: true
     client-fingerprint: chrome  
     skip-cert-verify: true
-    servername: subdivision-themes-heart-sugar.trycloudflare.com
+    servername: formats-leads-premier-alex.trycloudflare.com
     network: ws
     ws-opts:
-      path: /89b2beea8fb7?ed=2048
+      path: /5d3e45e47788?ed=2048
       headers:
-        Host: subdivision-themes-heart-sugar.trycloudflare.com
+        Host: formats-leads-premier-alex.trycloudflare.com
 
 proxy-groups:
   - name: 节点选择
