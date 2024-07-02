@@ -38,7 +38,7 @@ proxies:
     flow: xtls-rprx-vision
     servername: itunes.apple.com
     client-fingerprint: chrome
-    德国Reality-opts:
+    Reality-opts:
       public-key: -8d9Fojty0DfioqNR_LeFupB-JNMRMB9LkHZnGaGuk4
       short-id: 54c2bde29b44bd4c
 
