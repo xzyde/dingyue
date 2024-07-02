@@ -27,7 +27,7 @@ dns:
       - 240.0.0.0/4
 
 proxies:        
-  - name:德国Reality
+  - name: Reality
     type: vless
     server: 2a01:4f8:231:f61b::1
     port: 1
@@ -38,7 +38,7 @@ proxies:
     flow: xtls-rprx-vision
     servername: itunes.apple.com
     client-fingerprint: chrome
-    Reality-opts:
+    reality-opts:
       public-key: -8d9Fojty0DfioqNR_LeFupB-JNMRMB9LkHZnGaGuk4
       short-id: 54c2bde29b44bd4c
 
@@ -77,7 +77,7 @@ proxy-groups:
     type: select
     proxies:
       - 自动选择
-      - 德国Reality
+      - Reality
       - Hysteria2
       - Vmess
       - DIRECT
@@ -85,7 +85,7 @@ proxy-groups:
   - name: 自动选择
     type: url-test #选出延迟最低的机场节点
     proxies:
-      - 德国Reality
+      - Reality
       - Hysteria2
       - Vmess
     url: "http://www.gstatic.com/generate_204"
@@ -97,4 +97,3 @@ rules:
     - GEOIP,LAN,DIRECT
     - GEOIP,CN,DIRECT
     - MATCH,节点选择
-
