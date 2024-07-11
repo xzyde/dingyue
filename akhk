@@ -30,8 +30,8 @@ proxies:
   - name: Reality
     type: vless
     server: 102.215.231.173
-    port: 12644
-    uuid: 38945290-5fd6-4885-abdf-28f01b0e356b
+    port: 12070
+    uuid: 658c52ff-a1da-4f08-b578-090b9538f895
     network: tcp
     udp: true
     tls: true
@@ -39,17 +39,17 @@ proxies:
     servername: itunes.apple.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: 5AIdcLpf4EPWmbaN0KKHv9FoIuqq9QEI5vDJVhqEFAg
-      short-id: 66944fdc9f611b0e
+      public-key: SlIdvwcSqzy7XYiFkFwxvAPEGUiF2iYwUvuqyqizNXk
+      short-id: 87680130704931e7
 
   - name: Hysteria2
     type: hysteria2
     server: 102.215.231.173
-    port: 10938
+    port: 13930
     #  up和down均不写或为0则使用BBR流控
     # up: "30 Mbps" # 若不写单位，默认为 Mbps
     # down: "200 Mbps" # 若不写单位，默认为 Mbps
-    password: 192ae26aef7495d7
+    password: 0b36ca8034455cf8
     sni: bing.com
     skip-cert-verify: true
     alpn:
@@ -58,19 +58,19 @@ proxies:
     type: vmess
     server: icook.hk
     port: 443
-    uuid: 2e67ca4a-b486-45cc-a4d5-b21177666ee2
+    uuid: 4c76841b-ec96-4abb-877a-410364004753
     alterId: 0
     cipher: auto
     udp: true
     tls: true
     client-fingerprint: chrome  
     skip-cert-verify: true
-    servername: quarter-psp-nam-nerve.trycloudflare.com
+    servername: coaching-witch-na-democratic.trycloudflare.com
     network: ws
     ws-opts:
-      path: /d30f7adb3da6?ed=2048
+      path: /1269ea7c530a?ed=2048
       headers:
-        Host: quarter-psp-nam-nerve.trycloudflare.com
+        Host: coaching-witch-na-democratic.trycloudflare.com
 
 proxy-groups:
   - name: 节点选择
