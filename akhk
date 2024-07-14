@@ -11,7 +11,7 @@ dns:
   ipv6: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
-  default-nameserver:
+  default-nameserver: 
     - 223.5.5.5
     - 8.8.8.8
   nameserver:
@@ -25,12 +25,13 @@ dns:
     geoip-code: CN
     ipcidr:
       - 240.0.0.0/4
-proxies:
+
+proxies:        
   - name: Reality
     type: vless
-    server: 104.28.221.41
-    port: 16789
-    uuid: cdbde086-beeb-4ac8-a5fd-46e1c85c5aa0
+    server: 102.215.231.173
+    port: 15513
+    uuid: 3929419d-d310-48b7-a5b8-fa7b3e389487
     network: tcp
     udp: true
     tls: true
@@ -38,16 +39,17 @@ proxies:
     servername: itunes.apple.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: EqGGMqjMNU-C1mt3Hat9JMB7bQLL8d4SgAZXSC5PXnE
-      short-id: a675e9a262afd7f0
+      public-key: Y7ikWU9E4Efdm1tgGtY74peN3L_cT9GkHVwcU8Q18CQ
+      short-id: 5cc8f81c089ffb51
+
   - name: Hysteria2
     type: hysteria2
-    server: 104.28.221.41
-    port: 17620
-    #  up和 down均 不 写 或 为 0则 使 用 BBR流 控
-    # up: "30 Mbps" # 若 不 写 单 位 ， 默 认 为  Mbps
-    # down: "200 Mbps" # 若 不 写 单 位 ， 默 认 为  Mbps
-    password: 88ac9566157820db
+    server: 102.215.231.173
+    port: 19056
+    #  up和down均不写或为0则使用BBR流控
+    # up: "30 Mbps" # 若不写单位，默认为 Mbps
+    # down: "200 Mbps" # 若不写单位，默认为 Mbps
+    password: cf0f24eccd409c69
     sni: bing.com
     skip-cert-verify: true
     alpn:
@@ -56,19 +58,20 @@ proxies:
     type: vmess
     server: icook.hk
     port: 443
-    uuid: 18dbe9dc-f5fa-424d-b783-69f9b9b1c065
+    uuid: 3132b27b-4d33-4852-b651-43113bc81472
     alterId: 0
     cipher: auto
     udp: true
     tls: true
-    client-fingerprint: chrome
+    client-fingerprint: chrome  
     skip-cert-verify: true
-    servername: intervention-expressions-trend-decimal.trycloudflare.com
+    servername: districts-literature-nobody-exec.trycloudflare.com
     network: ws
     ws-opts:
-      path: /b89b335190a7?ed=2048
+      path: /62614d7b878c?ed=2048
       headers:
-        Host: intervention-expressions-trend-decimal.trycloudflare.com
+        Host: districts-literature-nobody-exec.trycloudflare.com
+
 proxy-groups:
   - name: 节点选择
     type: select
@@ -78,8 +81,9 @@ proxy-groups:
       - Hysteria2
       - Vmess
       - DIRECT
+
   - name: 自动选择
-    type: url-test #选 出 延 迟 最 低 的 机 场 节 点
+    type: url-test #选出延迟最低的机场节点
     proxies:
       - Reality
       - Hysteria2
@@ -87,6 +91,8 @@ proxy-groups:
     url: "http://www.gstatic.com/generate_204"
     interval: 300
     tolerance: 50
+
+
 rules:
     - GEOIP,LAN,DIRECT
     - GEOIP,CN,DIRECT
