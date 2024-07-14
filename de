@@ -29,8 +29,8 @@ proxies:
   - name: Reality
     type: vless
     server: 104.28.221.34
-    port: 11794
-    uuid: 94f6a4bd-562d-48e7-982f-8f94c960d45f
+    port: 15712
+    uuid: d75ffaaf-871d-4b45-9283-9bddd186980a
     network: tcp
     udp: true
     tls: true
@@ -38,16 +38,16 @@ proxies:
     servername: itunes.apple.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: Iv2zT8mT841OMBVTAHDpSs5bFOfuYMJyQJtQpwZ8YQc
-      short-id: 87d733885a9c0194
+      public-key: m18HbCPObZpX-TOZgoGZFLXEcxwEsvMGbMnRL22502Q
+      short-id: ae7787bf58a967be
   - name: Hysteria2
     type: hysteria2
     server: 104.28.221.34
-    port: 16635
+    port: 15416
     #  up和 down均 不 写 或 为 0则 使 用 BBR流 控
     # up: "30 Mbps" # 若 不 写 单 位 ， 默 认 为  Mbps
     # down: "200 Mbps" # 若 不 写 单 位 ， 默 认 为  Mbps
-    password: d72a0292be6fae92
+    password: 5770bfada47651f9
     sni: bing.com
     skip-cert-verify: true
     alpn:
@@ -56,29 +56,29 @@ proxies:
     type: vmess
     server: icook.hk
     port: 443
-    uuid: 6152227a-6354-4bb9-8f9e-8d5e9ca0f731
+    uuid: 397c478d-864f-43eb-837f-c890083eb43b
     alterId: 0
     cipher: auto
     udp: true
     tls: true
     client-fingerprint: chrome
     skip-cert-verify: true
-    servername:
+    servername: parade-integrate-their-stevens.trycloudflare.com
     network: ws
     ws-opts:
-      path: /ff666df419b0?ed=2048
+      path: /dfbf54d05ccc?ed=2048
       headers:
-        Host:
+        Host: parade-integrate-their-stevens.trycloudflare.com
 proxy-groups:
-  - name: 节点选择
+  - name: 节 点 选 择
     type: select
     proxies:
-      - 自动选择
+      - 自 动 选 择
       - Reality
       - Hysteria2
       - Vmess
       - DIRECT
-  - name: 自动选择
+  - name: 自 动 选 择
     type: url-test #选 出 延 迟 最 低 的 机 场 节 点
     proxies:
       - Reality
@@ -90,4 +90,4 @@ proxy-groups:
 rules:
     - GEOIP,LAN,DIRECT
     - GEOIP,CN,DIRECT
-    - MATCH,节点选择
+    - MATCH,节 点 选 择
