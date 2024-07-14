@@ -28,9 +28,9 @@ dns:
 proxies:
   - name: Reality
     type: vless
-    server: 104.28.221.34
-    port: 15712
-    uuid: d75ffaaf-871d-4b45-9283-9bddd186980a
+    server: 2a01:4f8:231:f61b::1
+    port: 16643
+    uuid: 45250f0c-4710-4444-95c2-9a372ec3781c
     network: tcp
     udp: true
     tls: true
@@ -38,16 +38,16 @@ proxies:
     servername: itunes.apple.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: m18HbCPObZpX-TOZgoGZFLXEcxwEsvMGbMnRL22502Q
-      short-id: ae7787bf58a967be
+      public-key: hle6mZptDeyjiCc0VOMubxg3b03Ari3iJzY9--821Sw
+      short-id: e67f74dc6e240873
   - name: Hysteria2
     type: hysteria2
-    server: 104.28.221.34
-    port: 15416
+    server: 2a01:4f8:231:f61b::1
+    port: 17232
     #  up和 down均 不 写 或 为 0则 使 用 BBR流 控
     # up: "30 Mbps" # 若 不 写 单 位 ， 默 认 为  Mbps
     # down: "200 Mbps" # 若 不 写 单 位 ， 默 认 为  Mbps
-    password: 5770bfada47651f9
+    password: 8917981274af26dc
     sni: bing.com
     skip-cert-verify: true
     alpn:
@@ -56,19 +56,19 @@ proxies:
     type: vmess
     server: icook.hk
     port: 443
-    uuid: 397c478d-864f-43eb-837f-c890083eb43b
+    uuid: 14ca680d-2fe8-4398-9090-d531ca61f9a1
     alterId: 0
     cipher: auto
     udp: true
     tls: true
     client-fingerprint: chrome
     skip-cert-verify: true
-    servername: parade-integrate-their-stevens.trycloudflare.com
+    servername: heart-laura-keen-put.trycloudflare.com
     network: ws
     ws-opts:
-      path: /dfbf54d05ccc?ed=2048
+      path: /2a7a0814ad6a?ed=2048
       headers:
-        Host: parade-integrate-their-stevens.trycloudflare.com
+        Host: heart-laura-keen-put.trycloudflare.com
 proxy-groups:
   - name: 节 点 选 择
     type: select
