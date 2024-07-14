@@ -28,9 +28,9 @@ dns:
 proxies:
   - name: Reality
     type: vless
-    server: 2a01:4f8:231:f61b::1
-    port: 17816
-    uuid: eb416a53-4ae9-4a2a-933f-8a219f7baca1
+    server: 104.28.221.34
+    port: 11794
+    uuid: 94f6a4bd-562d-48e7-982f-8f94c960d45f
     network: tcp
     udp: true
     tls: true
@@ -38,16 +38,16 @@ proxies:
     servername: itunes.apple.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: 6lC07NPAt1YvGXlGjRpLXOv24vfz9XfG1C98Bjk1zBo
-      short-id: 45e3a1274eab5c8b
+      public-key: Iv2zT8mT841OMBVTAHDpSs5bFOfuYMJyQJtQpwZ8YQc
+      short-id: 87d733885a9c0194
   - name: Hysteria2
     type: hysteria2
-    server: 2a01:4f8:231:f61b::1
-    port: 17176
+    server: 104.28.221.34
+    port: 16635
     #  up和 down均 不 写 或 为 0则 使 用 BBR流 控
     # up: "30 Mbps" # 若 不 写 单 位 ， 默 认 为  Mbps
     # down: "200 Mbps" # 若 不 写 单 位 ， 默 认 为  Mbps
-    password: aa874d1ea6e784d4
+    password: d72a0292be6fae92
     sni: bing.com
     skip-cert-verify: true
     alpn:
@@ -56,7 +56,7 @@ proxies:
     type: vmess
     server: icook.hk
     port: 443
-    uuid: cc27730f-2ac8-49c8-a942-fee9935ea53c
+    uuid: 6152227a-6354-4bb9-8f9e-8d5e9ca0f731
     alterId: 0
     cipher: auto
     udp: true
@@ -66,7 +66,7 @@ proxies:
     servername:
     network: ws
     ws-opts:
-      path: /a25ceeb8bd84?ed=2048
+      path: /ff666df419b0?ed=2048
       headers:
         Host:
 proxy-groups:
