@@ -38,8 +38,7 @@ proxies:
     servername: itunes.apple.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: EqGGMqjMNU-C1mt3Hat9JMB7bQLL8d4SgAZXSC5PX
-nE
+      public-key: EqGGMqjMNU-C1mt3Hat9JMB7bQLL8d4SgAZXSC5PXnE
       short-id: a675e9a262afd7f0
   - name: Hysteria2
     type: hysteria2
@@ -64,24 +63,22 @@ nE
     tls: true
     client-fingerprint: chrome
     skip-cert-verify: true
-    servername: intervention-expressions-trend-decimal.tryc
-loudflare.com
+    servername: intervention-expressions-trend-decimal.trycloudflare.com
     network: ws
     ws-opts:
       path: /b89b335190a7?ed=2048
       headers:
-        Host: intervention-expressions-trend-decimal.tryclo
-udflare.com
+        Host: intervention-expressions-trend-decimal.trycloudflare.com
 proxy-groups:
-  - name: 节 点 选 择
+  - name: 节点选择
     type: select
     proxies:
-      - 自 动 选 择
+      - 自动选择
       - Reality
       - Hysteria2
       - Vmess
       - DIRECT
-  - name: 自 动 选 择
+  - name: 自动选择
     type: url-test #选 出 延 迟 最 低 的 机 场 节 点
     proxies:
       - Reality
@@ -93,4 +90,4 @@ proxy-groups:
 rules:
     - GEOIP,LAN,DIRECT
     - GEOIP,CN,DIRECT
-    - MATCH,节 点 选 择
+    - MATCH,节点选择
