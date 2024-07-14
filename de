@@ -28,9 +28,9 @@ dns:
 proxies:
   - name: Reality
     type: vless
-    server: 104.28.221.41
-    port: 16789
-    uuid: cdbde086-beeb-4ac8-a5fd-46e1c85c5aa0
+    server: 2a01:4f8:231:f61b::1
+    port: 17816
+    uuid: eb416a53-4ae9-4a2a-933f-8a219f7baca1
     network: tcp
     udp: true
     tls: true
@@ -38,16 +38,16 @@ proxies:
     servername: itunes.apple.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: EqGGMqjMNU-C1mt3Hat9JMB7bQLL8d4SgAZXSC5PXnE
-      short-id: a675e9a262afd7f0
+      public-key: 6lC07NPAt1YvGXlGjRpLXOv24vfz9XfG1C98Bjk1zBo
+      short-id: 45e3a1274eab5c8b
   - name: Hysteria2
     type: hysteria2
-    server: 104.28.221.41
-    port: 17620
+    server: 2a01:4f8:231:f61b::1
+    port: 17176
     #  up和 down均 不 写 或 为 0则 使 用 BBR流 控
     # up: "30 Mbps" # 若 不 写 单 位 ， 默 认 为  Mbps
     # down: "200 Mbps" # 若 不 写 单 位 ， 默 认 为  Mbps
-    password: 88ac9566157820db
+    password: aa874d1ea6e784d4
     sni: bing.com
     skip-cert-verify: true
     alpn:
@@ -56,19 +56,19 @@ proxies:
     type: vmess
     server: icook.hk
     port: 443
-    uuid: 18dbe9dc-f5fa-424d-b783-69f9b9b1c065
+    uuid: cc27730f-2ac8-49c8-a942-fee9935ea53c
     alterId: 0
     cipher: auto
     udp: true
     tls: true
     client-fingerprint: chrome
     skip-cert-verify: true
-    servername: intervention-expressions-trend-decimal.trycloudflare.com
+    servername:
     network: ws
     ws-opts:
-      path: /b89b335190a7?ed=2048
+      path: /a25ceeb8bd84?ed=2048
       headers:
-        Host: intervention-expressions-trend-decimal.trycloudflare.com
+        Host:
 proxy-groups:
   - name: 节点选择
     type: select
