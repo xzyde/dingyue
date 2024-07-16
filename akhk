@@ -30,8 +30,8 @@ proxies:
   - name: Reality
     type: vless
     server: 102.215.231.173
-    port: 15513
-    uuid: 3929419d-d310-48b7-a5b8-fa7b3e389487
+    port: 14389
+    uuid: 6eaa8e9d-5c9f-40b3-8ee9-0269dd83f419
     network: tcp
     udp: true
     tls: true
@@ -39,17 +39,17 @@ proxies:
     servername: itunes.apple.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: Y7ikWU9E4Efdm1tgGtY74peN3L_cT9GkHVwcU8Q18CQ
-      short-id: 5cc8f81c089ffb51
+      public-key: rON7a6LjYyBb-bSiZeUtIoCThqpGnjksdOJIJhaLvl0
+      short-id: 4d3e27ff54d21c44
 
   - name: Hysteria2
     type: hysteria2
     server: 102.215.231.173
-    port: 19056
+    port: 11340
     #  up和down均不写或为0则使用BBR流控
     # up: "30 Mbps" # 若不写单位，默认为 Mbps
     # down: "200 Mbps" # 若不写单位，默认为 Mbps
-    password: cf0f24eccd409c69
+    password: 7cfb7844fae4843b
     sni: bing.com
     skip-cert-verify: true
     alpn:
@@ -58,19 +58,19 @@ proxies:
     type: vmess
     server: icook.hk
     port: 443
-    uuid: 3132b27b-4d33-4852-b651-43113bc81472
+    uuid: f595cf50-5323-44b1-9bc8-b32166069946
     alterId: 0
     cipher: auto
     udp: true
     tls: true
     client-fingerprint: chrome  
     skip-cert-verify: true
-    servername: districts-literature-nobody-exec.trycloudflare.com
+    servername: spectrum-systems-customs-height.trycloudflare.com
     network: ws
     ws-opts:
-      path: /62614d7b878c?ed=2048
+      path: /4d3b4644a970?ed=2048
       headers:
-        Host: districts-literature-nobody-exec.trycloudflare.com
+        Host: spectrum-systems-customs-height.trycloudflare.com
 
 proxy-groups:
   - name: 节点选择
