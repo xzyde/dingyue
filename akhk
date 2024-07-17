@@ -30,8 +30,8 @@ proxies:
   - name: Reality
     type: vless
     server: 102.215.231.173
-    port: 13616
-    uuid: e2e16e8f-785c-49f6-8a5d-37093fcba0ff
+    port: 14327
+    uuid: a1a71efb-b0eb-4619-8ca2-d47465b0ff35
     network: tcp
     udp: true
     tls: true
@@ -39,17 +39,17 @@ proxies:
     servername: itunes.apple.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: tP1LJWxx_z9M0TWha4YMnABTqGtleRCsg8IsO96k2kw
-      short-id: 78fdfd0c645ee60c
+      public-key: ZIAWDfp8ukyhPcqFpcsW2Ln8oFBgjBV4vJg-QtVmaVc
+      short-id: cc8951c072473c7f
 
   - name: Hysteria2
     type: hysteria2
     server: 102.215.231.173
-    port: 17237
+    port: 16955
     #  up和down均不写或为0则使用BBR流控
     # up: "30 Mbps" # 若不写单位，默认为 Mbps
     # down: "200 Mbps" # 若不写单位，默认为 Mbps
-    password: 09e238c46d59f6a7
+    password: 52b608f2b95ab2aa
     sni: bing.com
     skip-cert-verify: true
     alpn:
@@ -58,19 +58,19 @@ proxies:
     type: vmess
     server: icook.hk
     port: 443
-    uuid: 51e5875c-0506-4858-ab3d-07b2e92f8641
+    uuid: fb8aabec-0d51-40ba-8042-bbea4a3a3d43
     alterId: 0
     cipher: auto
     udp: true
     tls: true
     client-fingerprint: chrome  
     skip-cert-verify: true
-    servername: sg-headline-hs-printing.trycloudflare.com
+    servername: buried-toy-investigator-luxembourg.trycloudflare.com
     network: ws
     ws-opts:
-      path: /110135d0a29a?ed=2048
+      path: /a2e64ff96c0f?ed=2048
       headers:
-        Host: sg-headline-hs-printing.trycloudflare.com
+        Host: buried-toy-investigator-luxembourg.trycloudflare.com
 
 proxy-groups:
   - name: 节点选择
