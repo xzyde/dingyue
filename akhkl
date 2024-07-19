@@ -29,9 +29,9 @@ dns:
 proxies:        
   - name: Reality
     type: vless
-    server: 2a01:4f8:231:f61b::1
-    port: 1
-    uuid: b93f0833-0c80-4b98-9c74-0f818ec13eed
+    server: 45.39.198.131
+    port: 15159
+    uuid: 05878b2c-f20b-49dc-953e-ec614346c426
     network: tcp
     udp: true
     tls: true
@@ -39,17 +39,17 @@ proxies:
     servername: itunes.apple.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: -8d9Fojty0DfioqNR_LeFupB-JNMRMB9LkHZnGaGuk4
-      short-id: 54c2bde29b44bd4c
+      public-key: H_RGEnhy586hVSQACoCwIaO8ratwOE2mG2VOBWYD5Wc
+      short-id: 97d63dba98a1e909
 
   - name: Hysteria2
     type: hysteria2
-    server: 2a01:4f8:231:f61b::1
-    port: 2
+    server: 45.39.198.131
+    port: 10071
     #  up和down均不写或为0则使用BBR流控
     # up: "30 Mbps" # 若不写单位，默认为 Mbps
     # down: "200 Mbps" # 若不写单位，默认为 Mbps
-    password: f8b8331d0624c6de
+    password: 07d55522ff32fcfc
     sni: bing.com
     skip-cert-verify: true
     alpn:
@@ -58,19 +58,19 @@ proxies:
     type: vmess
     server: icook.hk
     port: 443
-    uuid: 66f586ee-8de1-4fee-9c46-de1db9f36f25
+    uuid: f4831681-2379-4c25-98cd-0b9d7ca6cce7
     alterId: 0
     cipher: auto
     udp: true
     tls: true
     client-fingerprint: chrome  
     skip-cert-verify: true
-    servername: asin-affairs-see-trained.trycloudflare.com
+    servername: suspended-raw-analyst-automated.trycloudflare.com
     network: ws
     ws-opts:
-      path: /36e510837c53?ed=2048
+      path: /3bcd94b4cab5?ed=2048
       headers:
-        Host: asin-affairs-see-trained.trycloudflare.com
+        Host: suspended-raw-analyst-automated.trycloudflare.com
 
 proxy-groups:
   - name: 节点选择
