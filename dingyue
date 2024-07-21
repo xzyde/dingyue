@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash.Meta
-# 创建时间：2024-07-19 21:29:38
+# 创建时间：2024-07-21 17:24:14
 # 使用模版：V2RaySE 默认模版
 # 节点数量：3
 ####################################
@@ -87,8 +87,8 @@ dns:
 
 proxies:
   - {"name":"233boy-ws-akntt.xzynb.fun","type":"vless","server":"akntt.xzynb.fun","port":443,"uuid":"b6bb63b3-b6d5-448a-aafa-330aee9e4a29","tls":true,"servername":"akntt.xzynb.fun","network":"ws","ws-opts":{"path":"/b6bb63b3-b6d5-448a-aafa-330aee9e4a29","headers":{"host":"akntt.xzynb.fun"}}}
-  - {"name":"233boy-ws-akl.xzynb.fun","type":"vless","server":"akl.xzynb.fun","port":443,"uuid":"4611d9ca-8aa0-49cc-872f-a1240a4e4250","tls":true,"servername":"akl.xzynb.fun","network":"ws","ws-opts":{"path":"/4611d9ca-8aa0-49cc-872f-a1240a4e4250","headers":{"host":"akl.xzynb.fun"}}}
-  - {"name":"233boy-ws-akl1.xzynb.fun","type":"vmess","server":"akl1.xzynb.fun","port":443,"cipher":"auto","uuid":"c08e43b8-6d73-4aa3-9b1b-08f1a2f088c1","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/c08e43b8-6d73-4aa3-9b1b-08f1a2f088c1","headers":{"host":"akl1.xzynb.fun"}}}
+  - {"name":"akl-vless","type":"vless","server":"akl.xzynb.fun","port":443,"uuid":"4611d9ca-8aa0-49cc-872f-a1240a4e4250","tls":true,"servername":"akl.xzynb.fun","network":"ws","ws-opts":{"path":"/4611d9ca-8aa0-49cc-872f-a1240a4e4250","headers":{"host":"akl.xzynb.fun"}}}
+  - {"name":"akl1-vmess","type":"vmess","server":"akl1.xzynb.fun","port":443,"cipher":"auto","uuid":"c08e43b8-6d73-4aa3-9b1b-08f1a2f088c1","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/c08e43b8-6d73-4aa3-9b1b-08f1a2f088c1","headers":{"host":"akl1.xzynb.fun"}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -96,8 +96,8 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 233boy-ws-akntt.xzynb.fun
-      - 233boy-ws-akl.xzynb.fun
-      - 233boy-ws-akl1.xzynb.fun
+      - akl-vless
+      - akl1-vmess
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -105,8 +105,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 233boy-ws-akntt.xzynb.fun
-      - 233boy-ws-akl.xzynb.fun
-      - 233boy-ws-akl1.xzynb.fun
+      - akl-vless
+      - akl1-vmess
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -114,32 +114,32 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 233boy-ws-akntt.xzynb.fun
-      - 233boy-ws-akl.xzynb.fun
-      - 233boy-ws-akl1.xzynb.fun
+      - akl-vless
+      - akl1-vmess
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - 233boy-ws-akntt.xzynb.fun
-      - 233boy-ws-akl.xzynb.fun
-      - 233boy-ws-akl1.xzynb.fun
+      - akl-vless
+      - akl1-vmess
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - 233boy-ws-akntt.xzynb.fun
-      - 233boy-ws-akl.xzynb.fun
-      - 233boy-ws-akl1.xzynb.fun
+      - akl-vless
+      - akl1-vmess
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - 233boy-ws-akntt.xzynb.fun
-      - 233boy-ws-akl.xzynb.fun
-      - 233boy-ws-akl1.xzynb.fun
+      - akl-vless
+      - akl1-vmess
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -163,8 +163,8 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 233boy-ws-akntt.xzynb.fun
-      - 233boy-ws-akl.xzynb.fun
-      - 233boy-ws-akl1.xzynb.fun
+      - akl-vless
+      - akl1-vmess
 
 rules:
 # 本地/局域网地址
